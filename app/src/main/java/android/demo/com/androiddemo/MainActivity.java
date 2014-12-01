@@ -17,19 +17,22 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Set the xml view that will be used for this activity
         setContentView(R.layout.activity_main);
 
+        //Obtain the button instance from the view
         Button btnStart = (Button)findViewById(R.id.start);
+
+        //Add an event listener to the button
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Raise an Intent to the android system to move us to the next activity
                 Intent intent = new Intent(MainActivity.this, CircleActivity.class);
-                overridePendingTransition(android.support.v7.appcompat.R.anim.abc_slide_in_top, android.support.v7.appcompat.R.anim.abc_slide_out_bottom);
                 startActivity(intent);
             }
         });
-
-
 
     }
 
