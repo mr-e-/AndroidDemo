@@ -1,13 +1,9 @@
 package android.demo.com.androiddemo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ScaleGestureDetector;
-import android.view.View;
 import android.widget.Button;
 
 
@@ -18,22 +14,25 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //1. *****************************************************
         //Set the xml view that will be used for this activity
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+        //********************************************************
 
+        //2. *****************************************************
         //Obtain the button instance from the view
         Button btnStart = (Button)findViewById(R.id.start);
 
         //Add an event listener to the button
-        btnStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Raise an Intent to the android system to move us to the next activity
-                Intent intent = new Intent(MainActivity.this, CircleActivity.class);
-                startActivity(intent);
-            }
-        });
-
+//        btnStart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Raise an Intent to the android system to move us to the next activity
+//                Intent intent = new Intent(MainActivity.this, CircleActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+        //*********************************************************
     }
 
 
